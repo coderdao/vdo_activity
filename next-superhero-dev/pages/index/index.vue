@@ -12,6 +12,21 @@
 		</swiper>
 		<!-- 轮播图 ^ -->
 		
+		
+		<!-- 热门超英 V -->
+		<view class="page-block super-hot">
+			<view class="hot-title-wapper">
+				<image src="../../static/icos/hot.png" class="hot-ico"></image>
+				<view class="hot-title">
+					热门超英
+				</view>
+			</view>
+			<view class="">
+				
+			</view>
+		</view>
+		<!-- 热门超英 ^ -->
+		
 	</view>
 </template>
 
