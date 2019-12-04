@@ -21,10 +21,40 @@
 					热门超英
 				</view>
 			</view>
-			<view class="">
-				
-			</view>
 		</view>
+		
+		<scroll-view scroll-x="true" class="hot">
+					<view class="single-positer">
+						<view class="positer-wapper">
+							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
+							<view class="movie-name">
+								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
+							</view>
+							<view class=""></view>
+						</view>
+					</view>
+					
+					<view class="single-positer">
+						<view class="positer-wapper">
+							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
+							<view class="movie-name">
+								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
+							</view>
+							<view class=""></view>
+						</view>
+					</view>
+					
+					<view class="single-positer">
+						<view class="positer-wapper">
+							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
+							<view class="movie-name">
+								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
+							</view>
+							<view class=""></view>
+						</view>
+					</view>
+		</scroll-view>
+		
 		<!-- 热门超英 ^ -->
 		
 	</view>

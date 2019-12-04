@@ -31,4 +31,34 @@
 	
 	margin-left: 20upx;
 }
+
+.hot {
+	width: 100%;
+	white-space: nowrap;
+}
+
+.single-positer {
+	display: inline-block;
+	margin-left: 20upx;
+}
+.positer-wapper {
+	display: flex;
+	flex-direction: column;
+}
+.positer {
+	width: 200upx;
+	height: 270upx;
+}
+.movie-name {
+	width: 200upx;
+	margin-top: 10upx;
+	
+	font-size: 14px;
+	font-weight: bold;
+	
+	/* 超出省略 */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 /* 热门超英 ^ */
