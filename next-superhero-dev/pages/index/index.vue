@@ -24,33 +24,20 @@
 		</view>
 		
 		<scroll-view scroll-x="true" class="hot">
-					<view class="single-positer">
+					<view class="single-positer" v-for="(hot,key) of hot_list" :key="key">
 						<view class="positer-wapper">
-							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
+							<image :src="hot.game_icon" class="positer"></image>
 							<view class="movie-name">
-								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
+								{{hot.game_name}}
 							</view>
-							<view class=""></view>
-						</view>
-					</view>
-					
-					<view class="single-positer">
-						<view class="positer-wapper">
-							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
-							<view class="movie-name">
-								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
+							<view class="movie-score-wapper">
+								<image src="../../static/icos/star-yellow.png" class="star-ico"></image>
+								<image src="../../static/icos/star-yellow.png" class="star-ico"></image>
+								<image src="../../static/icos/star-yellow.png" class="star-ico"></image>
+								<image src="../../static/icos/star-yellow.png" class="star-ico"></image>
+								<image src="../../static/icos/star-gray.png" class="star-ico"></image>
+								<view class="movie-score">9.0</view>
 							</view>
-							<view class=""></view>
-						</view>
-					</view>
-					
-					<view class="single-positer">
-						<view class="positer-wapper">
-							<image src="../../static/poster/civilwar.jpg" class="positer"></image>
-							<view class="movie-name">
-								蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠蝙蝠侠
-							</view>
-							<view class=""></view>
 						</view>
 					</view>
 		</scroll-view>
@@ -67,7 +54,8 @@
 		data() {
 			return {
 				title: 'Hello',
-				'img_list': []
+				'img_list': [],
+				'hot_list': []
 			}
 		},
 		onLoad() {
@@ -91,6 +79,26 @@
 						}
 						
 						me.$data.img_list = json.content;
+			    }
+			});
+			
+			uni.request({
+			    url: SERVER_URL+'/api/gameList?page=1&is_hit=1', // 请求轮播数据
+					method:"GET",
+			    data: { text: 'uni.request' },
+			    success: ( res ) => {
+						
+						let json = res.data;
+						if ( json.ret !== 1 ) { 
+							uni.showModal({
+								content: 'app异常：数据请求失败，请返回',
+								showCancel: false
+							}); 
+							
+							return false;
+						}
+						
+						me.$data.hot_list = json.content.game;
 			    }
 			});
 			

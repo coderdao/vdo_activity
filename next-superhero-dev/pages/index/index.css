@@ -61,4 +61,19 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+.movie-score-wapper {
+	display: flex;
+	flex-direction: row;
+}
+.star-ico {
+	height: 20upx;
+	width: 20upx;
+	margin-top: 6upx;
+}
+.movie-score {
+	font-size: 22upx;
+	color: grey;
+	margin-left: 8upx;
+}
 /* 热门超英 ^ */
